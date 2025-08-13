@@ -1,0 +1,99 @@
+##### Booting Notes ############################################################
+1. Download an iso file. It may give you a list of locations to download it
+   from. Clarkson University is my usual pick.
+   - Linux Mint "Cinnamon Edition": https://linuxmint.com/edition.php?id=319 
+   - Arch Linux: https://archlinux.org/download/
+   - EndeavorOS: https://endeavouros.com
+
+2. Flash the iso file onto a USB with balenaEtcher.
+3. Restart the future Linux PC and press F12 to enter the boot menu.
+   Then press which drive you want to boot from. You may need to disable
+   SecureBoot.
+
+
+
+##### Installing EndeavorOS ####################################################
+1. In the installation desktop, connect to wifi. An installation window
+   should then open up.
+2. Press "Start the Installer"
+3. Choose GNOME as the desktop.
+
+
+
+##### Setting up EndeavorOS ####################################################
+* Current EndeavorOS configuration:
+  - Sway: Desktop environment with key binds.
+  - Swaybg: Allows the sway background to be customized.
+  - ly: Login manager
+  - Yay: Arch User Repository (AUR) packet manager
+  - Kitty: Terminal emulator
+  - Nautilus: GNOME file manager
+  - Nemo: Fork of Nautilus with more features
+  - Wofi: Application launcher
+  - EWW: Wiget customizer
+  - Waybar: Taskbar customizer
+  - Vivaldi: Default browser (still using chromium though)
+  - Discord
+  - Gimp
+  - VSCode
+
+* Installing Yay:
+  1. Clone the git repo with "git clone https://aur.archlinux.org/yay.git"
+  2. Go into the yay directory with "cd yay"
+  3. Type "makepkg -si"
+
+* Installing EWW:
+  1. Since EWW is written in Rust. rustup will need to be installed with
+     "sudo pacman -S rustup".
+  2. Install EWW through Yay with "yay eww"
+  3. Enter 1. Then N. Then N.
+
+
+
+##### Customizing EndeavorOS ###################################################
+* Customizing Sway:
+  - Sway can be customized by editing the .config/sway/config file.
+  - Some key binds require a mod key. By defaul Mod4 (the windows key) is chosen.
+
+  1. Change the default terminal with "set $term kitty".
+  2. Change the default application launcher with "set $menu wofi --show run".
+  3. Change the default file explorer with "set $file_explorer nautilus"
+  4. Remove the "shift" key from the file explorer keybind. Then delete the
+     original keybinding that is "$mod+e".
+
+* Customizing Kitty:
+  - Kitty can be customized by creating a .conf file and then adding
+    "include theme.conf" in the kitty.conf file.
+  - Commands can be executed on terminal startup by typing them into the
+    .bashrc file. Aliases can also be created there. Seperate multiple commands
+    with ";". The entire alias must still be within the '' characters.
+  - Fonts can be added by downloading the proper git repository, extracting it,
+    and then moving it to /usr/share/fonts.
+
+* Customizing Waybar
+  - Waybar can be customized by editing the config and style.css files.
+
+
+
+##### Arch Linux Terminal Commands #############################################
+* "sudo": Allows a user to temporarily run commands with superuser privileges.
+* "clear": Clears the previous text from the terminal.
+* "sudo pacman -Syu": Updates the system.
+* "sudo pacman -S": Installs new software packages. This needs to be followed
+                    by the package name.
+* "sudo pacman -R": Uninstalls a package from the system.  This needs to be 
+                    followed by the package name.
+* "sudo pacman -Rsn": Uninstalls a package, its dependencies, and config file
+                      backups. This needs to be followed by the package name.
+* "sudo pacman -Q": Used to display all of the packages on the system.
+* "makepkg -si": Builds and installs a package. This may need to be used if
+                 a package is being cloned from a git repository. This command
+                 can only be done after entering the package directory file
+                 with the "cd" command.
+* "cat": Displays file contents.
+* "code": Opens a file in VSCode.
+* "su": Used to switch to a different user, including the root user. This will
+        need to be followed by the username. Their password will also be
+        required.
+* "chmod": Used to change the permissions of a file. 777 will give all users
+           full access.
