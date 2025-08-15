@@ -33,8 +33,6 @@
   - EWW: Wiget customizer
   - Waybar: Taskbar customizer
   - Vivaldi: Default browser (still using chromium though)
-  - Discord
-  - Gimp
   - VSCode
 
 * Installing Yay:
@@ -72,6 +70,9 @@
 
 * Customizing Waybar
   - Waybar can be customized by editing the config and style.css files.
+
+* Deleting Gnome DE: Remember Nautilus runs off of some Gnome features. It
+                     will still work with the gnome-session package though.       
 
 
 

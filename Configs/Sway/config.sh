@@ -1,32 +1,26 @@
 # Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
 
 ### Variables
 #
-# Logo key. Use Mod1 for Alt. Use Mod4 for Windows.
+# Use Mod1 for Alt. Use Mod4 for Windows.
 set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+
+# Defining default apps
 set $term kitty
-# Your preferred application launcher
 set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
-# Your preferred file explorer
 set $file_explorer nautilus
+set $browser vivaldi
+set $Discord discord
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/dev/Pictures/Wallpapers/Rainworld Tower.png fill
-#
-# Example configuration:
-#
 output eDP-1 resolution 1920x1080 position 0,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -76,17 +70,12 @@ input 1160:4122:DELL0A20:00_0488:101A_Touchpad {
 #
 # Basics:
 #
-    # Start a terminal
     bindsym $mod+Return exec $term
-
-    # Start file explorer
     bindsym $mod+e exec $file_explorer
-
-    # Kill focused window
+    bindsym $mod+a exec $menu
+    bindsym $mod+b exec $browser
+    bindsym $mod+d exec $Discord
     bindsym $mod+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -97,9 +86,6 @@ input 1160:4122:DELL0A20:00_0488:101A_Touchpad {
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -154,11 +140,6 @@ input 1160:4122:DELL0A20:00_0488:101A_Touchpad {
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
@@ -172,9 +153,6 @@ input 1160:4122:DELL0A20:00_0488:101A_Touchpad {
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
-
-    # Move focus to the parent container
-    bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
