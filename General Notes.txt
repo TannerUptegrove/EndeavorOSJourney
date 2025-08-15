@@ -71,8 +71,8 @@
 * Customizing Waybar
   - Waybar can be customized by editing the config and style.css files.
 
-* Deleteing Gnome: Remember, Nautilus runs off of Gnome. You can delete Gnome
-                   but make sure to keep the gnome-session package.
+* Deleting Gnome DE: Remember Nautilus runs off of some Gnome features. It
+                     will still work with the gnome-session package though.       
 
 
 
