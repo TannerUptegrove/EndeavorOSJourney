@@ -82,9 +82,10 @@
 * "sudo pacman -Syu": Updates the system.
 * "sudo pacman -S": Installs new software packages. This needs to be followed
                     by the package name.
-* "sudo pacman -R": Uninstalls a package from the system.  This needs to be 
+* "sudo pacman -R": Removes a package from the system.  This needs to be 
                     followed by the package name.
-* "sudo pacman -Rsn": Uninstalls a package, its dependencies, and config file
+* "sudo pacman -Rc": Removes a package and all packages that depend on it.
+* "sudo pacman -Rsn": Removes a package, its dependencies, and config file
                       backups. This needs to be followed by the package name.
 * "sudo pacman -Q": Used to display all of the packages on the system.
 * "makepkg -si": Builds and installs a package. This may need to be used if
