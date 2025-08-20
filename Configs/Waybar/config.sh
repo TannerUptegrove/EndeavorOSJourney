@@ -10,7 +10,7 @@
 
     "modules-left": [ "network" ],
     "modules-center": [ "sway/workspaces" ],
-    "modules-right": [ "pulseaudio", "battery", "custom/clock" ],
+    "modules-right": [ "pulseaudio", "battery", "clock" ],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -26,13 +26,16 @@
     },
 
     "pulseaudio": {
-        "scroll-step": 5,
-        "max-volume": 150,
+        "scroll-step": 1,
+        "max-volume": 100,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-icons": [ "", "", " " ],
-        "nospacing": 5,
-        "format-muted": " ",
+        "format-bluetooth": "{icon}",
+        "format-icons": [ ""],
+        
+
+
+        "format-muted": "",
+        "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false
     },
@@ -61,9 +64,9 @@
         "tooltip": false
     },
 
-    "custom/clock": {
-        "exec": "date +\"%-I:%M %p\"",
-        "interval": 1,
+    "clock": {
+        "format": "󰅐 {:%I:%M %p}",
+        "format-alt": "󰅐 {:%m/%d/%y}",
         "tooltip": false
     }
 }
