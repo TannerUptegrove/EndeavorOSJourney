@@ -155,7 +155,7 @@ input 1133:49291:Logitech_G502_HERO_Gaming_Mouse {
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
     #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
 
-    #Will run an bash script that will check if the volume is 100%, if it isn't, then the volume will be raised.
+    #Will run an bash script that will check if the volume is 100%. If it isn't, then the volume will be raised.
     bindsym XF86AudioRaiseVolume exec .config/custom-bash-scripts/volumeFixer.sh
     bindsym XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
 
