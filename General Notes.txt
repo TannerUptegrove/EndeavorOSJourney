@@ -46,6 +46,23 @@
   2. Install EWW through Yay with "yay eww"
   3. Enter 1. Then N. Then N.
 
+* Installing Neofetch:
+  1. Install Neofetch using Yay
+  2. Enter 1, then N, then N.
+
+
+* Volume Fixing:
+  - Initially the volume was able to exceed 100%. But this can be prevented
+    by creating a bash script and then executing that when the volume up
+    button is pressed.
+
+* Using Custom Bash Scripts
+  - Typing "./bashScript" into the terminal will execute the script.
+    These files can be placed anywhere so long as their path is included.
+  - Once the file is ready, the execute permission will need to be added to
+    the file by typing "sudo chmod +X bashScript".
+  - These scripts can be executed via keybind by putting their file path in
+    sway after the correct keybind setting.
 
 
 ##### Customizing EndeavorOS ###################################################
