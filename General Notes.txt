@@ -85,11 +85,13 @@
   - Fonts can be added by downloading the proper git repository, extracting it,
     and then moving it to /usr/share/fonts.
 
-* Customizing Waybar
+* Customizing Waybar:
   - Waybar can be customized by editing the config and style.css files.
   - If you want a certain symbol to be displayed in Waybar, first
     download the font it comes from then go to https://wakamaifondue.com
     to load the symbols and copy it from there.
+
+* Customizing Eww:
 
 * Deleting Gnome DE: Remember Nautilus runs off of some Gnome features. It
                      will still work with the gnome-session package though.       
