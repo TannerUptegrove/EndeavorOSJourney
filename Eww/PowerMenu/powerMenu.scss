@@ -1,6 +1,11 @@
 * {
   all: unset;
-  font-family: Monaspace Krypton;
+  background: transparent;
+  font-family: Maple Mono;
+}
+
+window {
+  background: transparent;
 }
 
 .container {
@@ -25,7 +30,6 @@
 .userinfo-child {
   color: #d8cab8;
 }
-
 .label {
   font-size: 24px;
   font-weight: bold;
@@ -36,21 +40,15 @@
   font-weight: bold;
 }
 
-.completelytrans {
-  background: none;
-}
-
 .button {
   border-radius: 6px;
   margin: 10px;
 }
-
 .button:hover {
   background-color: #ac82e9;
   color: #141216;
   transition-duration: 150ms;
 }
-
 .button:active {
   background-color: #634a88;
   color: #141216;
@@ -61,31 +59,12 @@
   border-radius: 6px;
   margin: 10px;
 }
-
 .poweroff-button:hover {
   background-color: #fc4649;
   color: #141216;
   transition-duration: 150ms;
 }
-
 .poweroff-button:active {
-  background-color: #862526;
-  color: #141216;
-  transition-duration: 150ms;
-}
-
-.reboot-button {
-  border-radius: 6px;
-  margin: 10px;
-}
-
-.reboot-button:hover {
-  background-color: #fc4649;
-  color: #141216;
-  transition-duration: 150ms;
-}
-
-.reboot-button:active {
   background-color: #862526;
   color: #141216;
   transition-duration: 150ms;
@@ -95,13 +74,11 @@
   border-radius: 6px;
   margin: 10px;
 }
-
 .suspend-button:hover {
   background-color: #7b91fc;
   color: #141216;
   transition-duration: 150ms;
 }
-
 .suspend-button:active {
   background-color: #515ea1;
   color: #141216;
@@ -109,6 +86,6 @@
 }
 
 .icon-label {
-  font-size: 20px;
+  font-size: 45px;
   font-weight: normal;
 }
