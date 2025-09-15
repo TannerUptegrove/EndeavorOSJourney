@@ -1,2 +1,27 @@
-/* File that manages all of the style files for the widgets */
-@import "Styles/powerMenu.scss"
+* {
+  all: unset;
+  background: transparent;
+}
+
+.pmenu-widget {
+}
+
+.pmenu-side-img {
+  background-image: url("/home/dev/Pictures/Wallpapers/Signalis Collage.png");
+}
+
+.pmenu-buttons .btn {
+  background-color: rgba(7, 43, 28, 0.95);
+  font-family: "monaspace krypton";
+  font-size: 14px;
+  border: 1px solid #cae3b4;
+  color: #cae3b4;
+}
+
+.shutdown-btn, .restart-btn {
+  margin-bottom: 0px;
+}
+
+.lock-btn-img, .shutdown-btn-img, .restart-btn-img {
+   background-image: url("/home/dev/Pictures/Wallpapers/Signalis Collage.png");
+}

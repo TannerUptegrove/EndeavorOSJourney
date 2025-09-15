@@ -1,74 +1,59 @@
 * {
-    padding: 0px;
-    background: transparent;
-    font-family: Monaspace Krypton;
-    font-size: 14px;
+  font-family: Monaspace Krypton;
+  font-size: 14px;
 }
 
-.modules-left, .modules-center, .modules-right {
-    border-radius: 15px;
-    background-color: #330c07;
-    border: 5px solid #3d1b1b;
+window#waybar {
+  background-color: rgba(7, 43, 28, 0.7);
+  color: #cae3b4;
 }
 
-.modules-right {
-  min-width: 225px;
+#clock, #cpu, #memory, #network,
+#pulseaudio, #battery, #custom-power {
+  padding: 6px;
 }
 
-#network,
-#workspaces,
-#pulseaudio,
-#battery,
-#clock {
-    margin: 6px;
-    padding: 2px 4px;
-    border-radius: 8px;
-    color: #d8b8b8;
+#clock, #network, #pulseaudio, #battery {
+  margin: 5px 4px;
+  border: 1px solid #cae3b4;
+}
+
+#cpu {
+  margin: 5px 0px 5px 4px;
+  padding-right: 20px;
+  border-top: 1px solid #cae3b4;
+  border-bottom: 1px solid #cae3b4;
+  border-left: 1px solid #cae3b4;
+}
+
+#memory {
+  margin: 5px 4px 5px -12px;
+  border-top: 1px solid #cae3b4;
+  border-bottom: 1px solid #cae3b4;
+  border-right: 1px solid #cae3b4;
 }
 
 #workspaces button {
-  transition-duration: 100ms;
   all: initial;
-  min-width: 0;
-  font-weight: bold;
-  color: #d8cab8;
-  margin-right: 0.2cm;
-  margin-left: 0.2cm;
+  margin: 3px 8px;
+  color: #cae3b4;
+  transition-duration: 100ms;
 }
 
-/* Sets the style of the active workspace */
-#workspaces button.focused {
-  color: #eb2222;
-}
-
+#workspaces button.focused,
 #workspaces button:hover {
-  transition-duration: 120ms;
-  color: #eb2222;
+  color: #61723c;
 }
 
-#pulseaudio {
-  
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+  background-color: #61723c;
+  transition-duration: 100ms;
 }
 
-#pulseaudio:hover, #battery:hover {
-  transition-duration: 120ms;
-  background-image: linear-gradient(to bottom, #d16f2e 100%);
-  color: #141216;
+#custom-power {
+  margin: 5px 4px;
+  font-size: 16px;
+  background-color: #61723c;;
 }
-
-#battery.warning {
-  color: #1d2021;
-  background-color: #ffcd2a;
-}
-
-#battery.critical,
-#battery.urgent {
-  color: #1d2021;
-  background-color: #fc4649;
-}
-
-#battery.charging, #batter.plugged {
-  color: #1d2021;
-  background-color: #2f7521;
-}
-
