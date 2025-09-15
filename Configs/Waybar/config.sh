@@ -47,8 +47,8 @@
 
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "VOL {volume}%",
-        "format-muted": "VOL Mute",
+        "format": "VOL: {volume}%",
+        "format-muted": "VOL: Mute",
         "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false
