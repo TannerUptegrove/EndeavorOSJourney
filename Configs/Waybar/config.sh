@@ -3,48 +3,54 @@
     "position": "top",
     "spacing": 5,
     "height": 0,
-    "margin-top": 7,
-    "margin-right": 10,
-    "margin-left": 10,
-    "margin-bottom": -3,
 
-    "modules-left": [ "network" ],
+    "modules-left": [ "clock", "cpu", "memory", "network" ],
     "modules-center": [ "sway/workspaces" ],
-    "modules-right": [ "pulseaudio", "battery", "clock" ],
+    "modules-right": [ "pulseaudio", "battery", "custom/power"],
 
     "sway/workspaces": {
-        "disable-scroll": true,
-        "disable-click": false,
-        "tooltip": false,
-
+        "format": "",
         "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
             "4": []
-        }
+        },
+
+        "disable-scroll": true,
+        "disable-click": false,
+        "tooltip": false
     },
 
-    "pulseaudio": {
-        "scroll-step": 1,
-        "max-volume": 100,
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon}",
-        "format-icons": [ ""],
-        
+    "clock": {
+        "format": "{:%I:%M %D}",
+        "tooltip": false
+    },
 
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
 
-        "format-muted": "",
-        "nospacing": 1,
-        "on-click": "pavucontrol",
+    "memory": {
+        "format": "RAM: {}%",
         "tooltip": false
     },
 
     "network": {
-        "format-wifi": " {bandwidthDownBits}",
-        "format-ethernet": " {bandwidthDownBits}",
-        "format-disconnected": "󰤮 No Network",
+        "format": "NET: {bandwidthTotalBits}",
+        "format-disconnected": "No Network",
         "interval": 5,
+        "on-click": "exec nm-connection-editor",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "VOL {volume}%",
+        "format-muted": "VOL Mute",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
         "tooltip": false
     },
 
@@ -53,20 +59,16 @@
             "warning": 15,
             "critical": 10
         },
-        
+
         "interval": 1,
-        "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰂄 {capacity}%",
-        "format-full": "󱈑 {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": [ "󱊡", "󱊢", "󱊣" ],
+        "format": "BAT: {capacity}%",
+        "format-alt": "BAT: {time}",
         "tooltip": false
     },
 
-    "clock": {
-        "format": "󰅐 {:%I:%M %p}",
-        "format-alt": "󰅐 {:%m/%d/%y}",
-        "tooltip": false
+    "custom/power": {
+        "format": "",
+        "on-click": "pgrep eww && killall eww || bash ~/.config/eww/Scripts/powerMenu.sh",
+        "tool-tip": false
     }
 }

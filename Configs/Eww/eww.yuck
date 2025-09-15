@@ -3,38 +3,36 @@
   :stacking "overlay"
   :namespace "eww"
   :geometry (geometry
-    :x "4"
+    :x "3"
     :y "4"
     :anchor "top right")
   (powerMenu)
 )
 
 (defwidget powerMenu []
-  (box :height "200" :width "1000" :halign "center" :valign "center" :class "widget-parent"
-    (box :orientation "v" :height "100" :width "113" :halign "center" :valign "center" :class "widget-child"
-      (button :onclick "systemctl poweroff" :class "poweroff-button"
-        (label :class "icon-label"  :text "⏻")
-      )
-      (button :onclick "systemctl poweroff" :class "poweroff-button"
-        (label :class "icon-label"  :text "⏻")
-      )
-    )
+  (box :height "110" :orientation: "v" :space-evenly "false" :class "pmenu-widget"
+    (box :width "70" :class "pmenu-side-img")
 
-    (box :height "100" :width "113" :halign "center" :valign "center" :class "widget-child"
-      (button :onclick "systemctl suspend"  :class "suspend-button"
-        (label :class "icon-label"  :text "⏾")
+    (box :orientation "v" :class "pmenu-buttons"
+      (button :onclick "systemctl poweroff" :orientation "h" :class "btn shutdown-btn"
+        (box :space-evenly "false"
+          (box :width "45" :class "shutdown-btn-img")
+          (label :width "90" :text "Shutdown")
+        )
       )
-    )
 
-    (box :height "100" :width "113" :halign "center" :valign "center" :class "widget-child"
-      (button :onclick "eww close powermenu" :class "button"
-        (label :class "icon-label"  :text "⨯")
+      (button :onclick "systemctl reboot" :orientation "h" :class "btn restart-btn"
+        (box :space-evenly "false"
+          (box :width "45" :class "restart-btn-img")
+          (label :width "90" :text "Restart")
+        )
       )
-    )
 
-    (box :height "100" :width "113" :halign "center" :valign "center" :class "widget-child"
-      (button :onclick "eww close powermenu" :class "button"
-        (label :class "icon-label"  :text "⨯")
+      (button :onclick "systemctl suspend" :orientation "h" :class "btn lock-btn"
+        (box :space-evenly "false"
+          (box :width "45" :class "lock-btn-img")
+          (label :width "90" :text "Lock")
+        )
       )
     )
   )
