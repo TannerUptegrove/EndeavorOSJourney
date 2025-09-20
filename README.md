@@ -1,3 +1,3 @@
 # EndeavorOSJourney
 
-Config Files and a Basic Guide to using EndeavorOS.
+Config files and a basic guide to using EndeavorOS.
