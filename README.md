@@ -2,4 +2,4 @@
 
 Config files and a basic guide to using EndeavorOS.
 
-![Terminal!](Pictures/terminal.png)
+![Terminal!](https://github.com/TannerUptegrove/EndeavorOSJourney/blob/main/Pictures/Terminal.png)
