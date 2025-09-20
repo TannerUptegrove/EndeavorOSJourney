@@ -10,28 +10,26 @@
 )
 
 (defwidget powerMenu []
-  (box :height "110" :orientation: "v" :space-evenly "false" :class "pmenu-widget"
-    (box :width "70" :class "pmenu-side-img")
-
+  (box :height "130" :orientation: "v" :space-evenly "false" :class "pmenu-widget"
     (box :orientation "v" :class "pmenu-buttons"
       (button :onclick "systemctl poweroff" :orientation "h" :class "btn shutdown-btn"
         (box :space-evenly "false"
           (box :width "45" :class "shutdown-btn-img")
-          (label :width "90" :text "Shutdown")
+          (label :width "110" :text "Shutdown")
         )
       )
 
       (button :onclick "systemctl reboot" :orientation "h" :class "btn restart-btn"
         (box :space-evenly "false"
           (box :width "45" :class "restart-btn-img")
-          (label :width "90" :text "Restart")
+          (label :width "110" :text "Restart")
         )
       )
 
       (button :onclick "systemctl suspend" :orientation "h" :class "btn lock-btn"
         (box :space-evenly "false"
           (box :width "45" :class "lock-btn-img")
-          (label :width "90" :text "Lock")
+          (label :width "110" :text "Lock")
         )
       )
     )

@@ -13,31 +13,16 @@ window#waybar {
   padding: 6px;
 }
 
-#clock, #network, #pulseaudio, #battery {
+#clock, #cpu, #memory, #network, #pulseaudio, #battery {
   margin: 5px 4px;
   border: 1px solid #cae3b4;
-}
-
-#cpu {
-  margin: 5px 0px 5px 4px;
-  padding-right: 20px;
-  border-top: 1px solid #cae3b4;
-  border-bottom: 1px solid #cae3b4;
-  border-left: 1px solid #cae3b4;
-}
-
-#memory {
-  margin: 5px 4px 5px -12px;
-  border-top: 1px solid #cae3b4;
-  border-bottom: 1px solid #cae3b4;
-  border-right: 1px solid #cae3b4;
 }
 
 #workspaces button {
   all: initial;
   margin: 3px 8px;
-  color: #cae3b4;
   transition-duration: 100ms;
+  color: #cae3b4;
 }
 
 #workspaces button.focused,
@@ -48,12 +33,17 @@ window#waybar {
 #network:hover,
 #pulseaudio:hover,
 #battery:hover {
-  background-color: #61723c;
   transition-duration: 100ms;
+  background-color: #61723c;
 }
 
 #custom-power {
   margin: 5px 4px;
   font-size: 16px;
   background-color: #61723c;;
+}
+
+#custom-power:hover {
+  background-color: #cae3b4 ;
+  color: #61723c;
 }

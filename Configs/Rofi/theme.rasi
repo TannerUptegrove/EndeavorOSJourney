@@ -1,0 +1,97 @@
+* {
+    background: rgba(7, 43, 28, 0.7);
+    foreground: #cae3b4;
+    textcolor: #cae3b4;
+    selection: #61723c;
+}
+
+window {
+  width: 550px;
+  padding: 0;
+  transparency: "real";
+  background-color: #00000000;
+  border: 0px;
+  border-color: var(foreground);
+  font-family: "Monaspace Krypton";
+}
+
+entry {
+  placeholder: "Search...";
+  placeholder-color: var(selection);
+  padding: 12px;
+  border: 1;
+  color: var(foreground);
+  border-color: var(foreground);
+  background-color: var(background);
+}
+
+mainbox {
+  background-color: #00000000;
+  spacing: 0; 
+  padding: 0;
+  children: [ inputbar, listview ];
+}
+
+listview {
+  lines: 7;
+  padding: 25;
+  columns: 1;
+  border: 1;
+  border-color: var(foreground);
+  background-color: var(background);
+}
+
+inputbar {
+  children: [ prompt , seperator , entry ];
+  padding: 70 40;
+  border: 1;
+  border-color: var(foreground);
+  background-color: #000000;
+  background-image: url("juni.jpg");
+}
+
+prompt {
+  enabled: false;
+  text-color: var(foreground);
+  background-color: var(background);
+}
+
+seperator {
+  enabled: false;
+  expand: false;
+  background-color: #00000000;
+}
+
+element {
+  padding: 15 0;
+  children: [ element-icon, element-text ];
+  spacing: 20px;
+}
+
+element-icon{
+ size: 30;
+ background-color: inherit;
+ text-color: inherit;
+}
+
+element-text {
+  font: "Monaspace Krypton 14";
+  text-color: inherit;
+  background-color: inherit;
+}
+
+element normal.normal, element normal.active,
+element alternate.normal, element alternate.active {
+  text-color: var(foreground);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+element selected.normal {
+  background-color: var(selection);
+  text-color: var(foreground);
+}
+
+element selected.active {
+  background-color: var(selection);
+  text-color: var(foreground);
+}

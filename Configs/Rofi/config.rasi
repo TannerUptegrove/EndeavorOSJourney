@@ -1,0 +1,10 @@
+configuration {
+    font: "Monaspace Krypton 14";
+    fixed-num-lines: true;
+    show-icons: true;
+    eh: 1;
+    dpi: 100;
+    dispaly-drun: "Apps";
+}
+
+@theme "~/.config/rofi/theme.rasi"
