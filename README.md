@@ -11,6 +11,7 @@ Config files and a basic guide to using EndeavorOS.
 2. Add Xbox controller support.
 3. Add Bluetooth support (not necessary right now).
 
+
 ## Major Packages:
 - Sway     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       Desktop Environment / Tiling Manager
 - Waybar   &nbsp;&nbsp;&nbsp;&nbsp;                               Taskbar
