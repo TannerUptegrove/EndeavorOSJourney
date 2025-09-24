@@ -2,9 +2,8 @@
 
 ![Terminal!](https://github.com/TannerUptegrove/EndeavorOSJourney/blob/main/Pictures/Terminal.png)
 
-
-
 Config files and a basic guide to using EndeavorOS.
+<br>
 
 ### Future Plans
 1. Move on to Arch Linux with the same general theme.
