@@ -4,6 +4,7 @@
 
 Config files and a basic guide to using EndeavorOS.
 <br>
+<br>
 
 ### Future Plans
 1. Move on to Arch Linux with the same general theme.
