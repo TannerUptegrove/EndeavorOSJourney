@@ -12,7 +12,7 @@ Config files and a basic guide to using EndeavorOS.
 3. Add Bluetooth support (not necessary right now).
 <br>
 
-## Major Packages:
+### Major Packages:
 - Sway     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       Desktop Environment / Tiling Manager
 - Waybar   &nbsp;&nbsp;&nbsp;&nbsp;                               Taskbar
 - Kitty    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Terminal
